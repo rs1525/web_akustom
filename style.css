@@ -202,17 +202,56 @@ footer {
     }
 }
 
-.main-image-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 10px;
-    overflow: hidden;
-    border-radius: 30px;
-}
-
-#hero-image {
+#hero-carousel {
     max-width: none;
     width: 100%;
+    position: relative;
+}
+
+.carousel-container {
+    position: relative;
+    margin: 0 auto;
+}
+
+#app-carousel {
+    transition: opacity 0.5s ease;
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .container-wide {
@@ -260,10 +299,50 @@ footer {
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
+        /* Aún más pequeño en móvil para ahorrar espacio */
     }
 
     .subtitle {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+    }
+
+    .container-wide {
+        width: 100% !important;
+        max-width: none !important;
+    }
+
+    .carousel-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #app-carousel {
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .main-image {
+        border-radius: 5px;
+        width: 100% !important;
+        height: auto !important;
+        transform: scale(1.05);
+    }
+
+    .nav-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.5rem;
+    }
+
+    header {
+        height: auto;
+        padding: 3rem 1rem 1rem 1rem;
+        margin-top: 40px;
+    }
+
+    #hero-carousel {
+        padding: 0 !important;
     }
 }

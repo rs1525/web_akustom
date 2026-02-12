@@ -1,0 +1,20 @@
+[
+    {
+        "id": "zyra_icons",
+        "name": "Zyra Icon Pack",
+        "image": "imagen principal.png",
+        "link": "https://play.google.com/store/apps/details?id=com.zyra.icons"
+    },
+    {
+        "id": "glasswave",
+        "name": "Zyra Icon Pack",
+        "image": "zyra.png",
+        "link": "https://play.google.com/store/apps/details?id=com.zyra.icons"
+    },
+    {
+        "id": "essential_widgets",
+        "name": "Essential Widgets",
+        "image": "widget_preview.png",
+        "link": "#"
+    }
+]
