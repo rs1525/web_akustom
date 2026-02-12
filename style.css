@@ -338,11 +338,22 @@ footer {
 
     header {
         height: auto;
-        padding: 3rem 1rem 1rem 1rem;
+        padding: 4rem 1rem 2rem 1rem;
         margin-top: 40px;
     }
 
     #hero-carousel {
-        padding: 0 !important;
+        padding: 2rem 0 !important;
+        /* Añadimos espacio arriba para evitar solapamiento */
+    }
+
+    .main-image {
+        border-radius: 5px;
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain;
+        /* Asegura que la imagen no se corte */
+        transform: scale(1.0);
+        /* Bajamos el escalado para evitar que se salga */
     }
 }

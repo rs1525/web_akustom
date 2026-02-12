@@ -27,12 +27,14 @@
         </div>
     </header>
 
-    <section id="hero-carousel" style="padding-top: 0; text-align: center;">
+    <section id="hero-carousel" style="text-align: center;">
         <div class="carousel-container container-wide">
             <div id="app-carousel" class="glass-card animate-float">
                 <!-- El contenido se cargará dinámicamente desde apps.json -->
                 <div class="carousel-slide active">
-                    <img src="imagen principal.png" alt="Cargando..." class="main-image">
+                    <a href="#" id="carousel-link">
+                        <img src="imagen principal.png" alt="Cargando..." class="main-image">
+                    </a>
                 </div>
             </div>
 
@@ -155,6 +157,7 @@
             const carousel = document.getElementById('app-carousel');
             const nameEl = document.getElementById('current-app-name');
             const linkEl = document.getElementById('current-app-link');
+            const carouselLink = document.getElementById('carousel-link');
 
             // Actualizar imagen con transición suave
             carousel.style.opacity = '0';
@@ -162,6 +165,7 @@
                 carousel.querySelector('img').src = app.image;
                 nameEl.textContent = app.name;
                 linkEl.href = app.link;
+                if (carouselLink) carouselLink.href = app.link;
                 carousel.style.opacity = '1';
             }, 300);
         }
