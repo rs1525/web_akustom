@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akustom - Icon Packs & Widgets</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="top-nav">
+        <div class="brand">
+            <img src="logo_akustom15.png" alt="Logo AkustomSmall">
+            <span>AKustom15</span>
+        </div>
+    </nav>
+
+    <header class="compact-header">
+        <div class="animate">
+            <h1>Diseños que Elevan tu Pantalla</h1>
+            <p class="subtitle">Personalización premium para tu dispositivo Android.</p>
+        </div>
+    </header>
+
+    <section id="hero-image" style="padding-top: 0; text-align: center;">
+        <div class="glass-card main-image-container container-wide animate-float">
+            <img src="imagen principal.png" alt="Imagen Principal Akustom" class="main-image">
+        </div>
+        <div class="animate" style="margin-top: 2rem;">
+            <a href="#iconos" class="btn">Explorar Diseños</a>
+        </div>
+    </section>
+
+    <section id="iconos">
+        <h2 class="section-title">Icon Packs Premium</h2>
+        <div class="grid">
+            <div class="glass-card animate">
+                <img src="icon_pack_preview.png" alt="Vista previa de Pack de Iconos" class="card-img">
+                <div class="card-content">
+                    <h3>Zyra Icon Pack</h3>
+                    <p>Más de 2000 iconos con degradados suaves y bordes limpios para una apariencia futurista.</p>
+                    <a href="#" class="btn">Ver en Play Store</a>
+                </div>
+            </div>
+            <div class="glass-card animate" style="animation-delay: 0.2s;">
+                <img src="icon_pack_preview.png" alt="Vista previa de Pack de Iconos" class="card-img">
+                <div class="card-content">
+                    <h3>GlassWave Icons</h3>
+                    <p>Efectos de vidrio esmerilado aplicados a cada icono para una experiencia de usuario única.</p>
+                    <a href="#" class="btn">Próximamente</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="widgets" style="background: rgba(255,255,255,0.02);">
+        <h2 class="section-title">Widgets Potentes</h2>
+        <div class="grid">
+            <div class="glass-card animate">
+                <img src="widget_preview.png" alt="Vista previa de Widget" class="card-img">
+                <div class="card-content">
+                    <h3>Essential Widgets</h3>
+                    <p>Clima, reloj y calendarios con diseño minimalista y efectos de cristal.</p>
+                    <a href="#" class="btn">Descargar</a>
+                </div>
+            </div>
+            <div class="glass-card animate" style="animation-delay: 0.2s;">
+                <img src="widget_preview.png" alt="Vista previa de Widget" class="card-img">
+                <div class="card-content">
+                    <h3>Dynamic Music</h3>
+                    <p>Controles de música que cambian de color según la portada del álbum.</p>
+                    <a href="#" class="btn">Explorar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="detalles">
+        <h2 class="section-title">¿Por qué elegir Akustom?</h2>
+        <div class="grid">
+            <div class="glass-card card-content animate">
+                <h3>Alta Resolución</h3>
+                <p>Todos los recursos están diseñados en vectores para asegurar la máxima nitidez en cualquier pantalla.
+                </p>
+            </div>
+            <div class="glass-card card-content animate" style="animation-delay: 0.1s;">
+                <h3>Actualizaciones</h3>
+                <p>Añadimos nuevos iconos y widgets mensualmente basados en las peticiones de los usuarios.</p>
+            </div>
+            <div class="glass-card card-content animate" style="animation-delay: 0.2s;">
+                <h3>Fácil Integración</h3>
+                <p>Compatible con los principales launchers como Nova, Lawnchair y más.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Akustom Designs. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Efecto simple de revelación al hacer scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>
