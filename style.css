@@ -210,9 +210,14 @@ footer {
     border-radius: 30px;
 }
 
+#hero-image {
+    max-width: none;
+    width: 100%;
+}
+
 .container-wide {
-    max-width: 1400px;
-    width: 95%;
+    max-width: 2400px;
+    width: 98%;
 }
 
 .top-nav {
